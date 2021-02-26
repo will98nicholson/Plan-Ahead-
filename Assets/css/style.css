@@ -31,7 +31,9 @@ body {
     white-space: pre-wrap;
   }
   
-  .time-block{
+  #time-block{
+    display: flex;
+    justify-content: center;
     text-align: center;
     border-radius: 15px;
     background-color: gray;
