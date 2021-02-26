@@ -3,11 +3,7 @@ body {
     font-size: 16px;
     line-height: 1;
   }
-  #container {
-   
-    text-align: center;
-    background-color: lightblue;
-  }
+ 
   .col {
     padding: 1rem;
     border: 2px solid white;
@@ -38,6 +34,7 @@ body {
   .time-block{
     text-align: center;
     border-radius: 15px;
+    background-color: gray;
   }
   
   .row {
