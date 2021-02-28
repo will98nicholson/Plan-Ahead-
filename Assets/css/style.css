@@ -6,7 +6,7 @@ body {
  
   .col {
     padding: 1rem;
-    border: 2px solid white;
+    border: 2px solid ;
     
   
   }
@@ -31,7 +31,7 @@ body {
     white-space: pre-wrap;
   }
   
-  #time-block{
+  #time-display{
     display: flex;
     justify-content: center;
     text-align: center;

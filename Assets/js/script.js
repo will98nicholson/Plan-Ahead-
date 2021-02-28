@@ -18,5 +18,14 @@ gridTimes.each(function (index) {
    }
 });
 
+var saveActData = window.localStorage;
+var actInfo = [];
+// 
+$('saveBtn').on('click', function () {
+   var actInput = $(this).siblings('textarea').val();
+   var newID = $(this).attr('id');
+   actInfo.push({ newID, actInput });
+   saveActData.setItem('savedItems', JSON.stringify(actInfo));
+});
 
-// saveActData = window.localStorage;
+
