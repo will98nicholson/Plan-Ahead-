@@ -4,7 +4,7 @@ $("#currentDay").text(today.format("MMM Do, YYYY"));
 // assigns past present future to hours
 var gridTimes = $(".row");
 gridTimes.each(function (index) {
-   console.log($(this).children('textarea'));
+
    let selectTime = $(this).attr('id');
 
    if (moment().hour() < selectTime) {
@@ -14,7 +14,7 @@ gridTimes.each(function (index) {
       $(this).children('textarea').addClass("present")
    }
    else if (moment().hour() > selectTime) {
-      $(this).children('textarea').addClass("future")
+      $(this).children('textarea').addClass("past")
    }
 });
 
@@ -29,4 +29,3 @@ $('saveBtn').on('click', function () {
 });
 
 
-console.log(moment().hour())

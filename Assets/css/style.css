@@ -30,6 +30,10 @@ body {
   .description{
     white-space: pre-wrap;
   }
+  .time-block{
+    text-align: center;
+    border-radius: 15px;
+  }
   
   #time-display{
     display: flex;
