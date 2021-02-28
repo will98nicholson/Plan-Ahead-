@@ -2,7 +2,7 @@ var today = moment();
 $("#currentDay").text(today.format("MMM Do, YYYY"));
 
 // assigns past present future to hours
-let gridTimes = $(".row")
+var gridTimes = $(".row");
 gridTimes.each(function (index) {
    console.log($(this).children('textarea'));
    let selectTime = $(this).attr('id');
@@ -22,10 +22,11 @@ var saveActData = window.localStorage;
 var actInfo = [];
 // 
 $('saveBtn').on('click', function () {
-   var actInput = $(this).siblings('textarea').val();
-   var newID = $(this).attr('id');
+   let actInput = $(this).siblings('textarea').val();
+   let newID = $(this).attr('id');
    actInfo.push({ newID, actInput });
    saveActData.setItem('savedItems', JSON.stringify(actInfo));
 });
 
 
+console.log(moment().hour())
