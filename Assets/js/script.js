@@ -1,9 +1,22 @@
 var today = moment();
 $("#currentDay").text(today.format("MMM Do, YYYY"));
 
+// assigns past present future to hours
+let gridTimes = $(".row")
+gridTimes.each(function (index) {
+   console.log($(this).children('textarea'));
+   let selectTime = $(this).attr('id');
+
+   if (moment().hour() < selectTime) {
+      $(this).children('textarea').addClass("future")
+   }
+   else if (moment().hour() == selectTime) {
+      $(this).children('textarea').addClass("present")
+   }
+   else if (moment().hour() > selectTime) {
+      $(this).children('textarea').addClass("future")
+   }
+});
 
 
- //.attr('id', 'hour-' + i)
-
-//for (var i = 0; i < 9; i++) {
-   // timeBlock.
+// saveActData = window.localStorage;
